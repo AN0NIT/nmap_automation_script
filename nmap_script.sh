@@ -18,7 +18,6 @@ while read line; do
    str=$(echo $line | grep 64 | cut -c -"$size")
    if [ "$str" == "64 bytes" ]; then
    	break
-	echo "WTF"
    elif [ "$count" -gt "5" ]; then
    	echo "Host $IP is unavailable!"
 	rm ping.txt
